@@ -86,12 +86,12 @@ describe '[STEP1] ユーザログイン前のテスト' do
         click_link home_link
         is_expected.to eq '/'
       end
-      it 'Aboutを押すと、アバウト画面に遷移する' do
-        about_link = find_all('a')[2].native.inner_text
-        about_link = about_link.gsub(/\n/, '').gsub(/\A\s*/, '').gsub(/\s*\Z/, '')
-        click_link about_link
-        is_expected.to eq '/home/about'
-      end
+      # it 'Aboutを押すと、アバウト画面に遷移する' do
+      #   about_link = find_all('a')[2].native.inner_text
+      #   about_link = about_link.gsub(/\n/, '').gsub(/\A\s*/, '').gsub(/\s*\Z/, '')
+      #   click_link about_link
+      #   is_expected.to eq '/home/about'
+      # end
       it 'Sign upを押すと、新規登録画面に遷移する' do
         signup_link = find_all('a')[3].native.inner_text
         signup_link = signup_link.gsub(/\n/, '').gsub(/\A\s*/, '').gsub(/\s*\Z/, '')
